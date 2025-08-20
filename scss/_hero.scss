@@ -1,0 +1,112 @@
+.hero {
+    height: 100vh;
+    background: url("../assets/Section 1.png") no-repeat center/cover;
+    display: flex;
+    align-items: center; /* text va image o‘rtada */
+    color: white;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px; /* yonlarda joy qoldirish */
+    }
+
+    &__about {
+        h1 {
+            font-size: 64px;
+            font-weight: 700;
+            text-align: start;
+        }
+        p {
+            margin-top: 10px;
+            text-align: start;
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(139, 142, 153, 1);
+        }
+    }
+
+    &__box {
+        width: 100%;
+        max-width: 400px;
+        height: 60px;
+        margin-top: 30px;
+        border-radius: 15px;
+        padding: 8px 9px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i{
+            color: #2563eb;
+        }
+        input {
+            border: none;
+            outline: none;
+            padding: 8px 10px;
+            font-size: 14px;
+            flex: 1;
+            border-radius: 25px;
+        }
+
+        button {
+            width: 112px;
+            height: 45px;
+            background: #2563eb;
+            border: none;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 9px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 18px;
+            transition: .25s;
+            &:hover {
+                background: #467cf2;
+            }
+        }
+    }
+
+    &__image {
+        width: 400px;
+        height: auto;
+    }
+}
+
+@media (max-width: 990px) {
+    .hero {
+        height: auto;
+        padding: 80px 20px;
+        text-align: center;
+
+        &__wrapper {
+            flex-direction: column-reverse;
+            gap: 40px;
+        }
+
+        &__image {
+            width: 250px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        &__box {
+            margin: 20px auto 0;
+        }
+    }
+}

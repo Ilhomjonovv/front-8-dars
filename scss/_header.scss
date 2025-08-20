@@ -1,0 +1,71 @@
+.header{
+    position: absolute;
+    width: 100%;
+}
+
+
+.navbar{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    &-logo{
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+    }
+    &__item{
+        color: rgba(139, 142, 153, 1);
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &__collection{
+        display: flex;
+        list-style: none;
+        gap: 27px;
+    }
+    &__options{
+        display: flex;
+        gap: 20px;
+        color: white;
+    }
+    &__menu{
+        display: none;
+        color: white;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:990px) {
+    .navbar{
+        &__collection{
+            display: none;
+        }
+        &__options{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            color: black;
+            border-top: 1px solid #ddd;
+            padding: 14px;
+            justify-content: space-evenly;
+        }
+          &__menu{
+            display: block;
+        }
+    }
+}
